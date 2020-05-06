@@ -1,0 +1,21 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12.4-browsers
+        environment:
+          DATABASE_URL: postgres://postgres:postgres@localhost/sample_ci
+      - image: circleci/postgres:11.7
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run db:setup
+      - run: npm run build
+      - run:
+          name: Run Server
+          background: true
+          command: npm run start
+      - run: npm run ci:e2e
