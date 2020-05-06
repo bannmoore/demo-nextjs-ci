@@ -1,3 +1,7 @@
+# Demo: NextJS / Sequelize Postgres / Cypress w/ CI
+
+[![Build Status](https://travis-ci.org/bannmoore/demo-nextjs-ci.svg?branch=master)](https://travis-ci.org/bannmoore/demo-nextjs-ci) [![bannmoore](https://circleci.com/gh/bannmoore/demo-nextjs-ci.svg?style=svg)](https://app.circleci.com/pipelines/github/bannmoore/demo-nextjs-ci)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
