@@ -2,17 +2,29 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Set up the database:
 
-```bash
+```sh
+npm install
+docker-compose up -d
+npm run db:setup
+```
+
+Run the development server:
+
+```sh
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Run the cypress tests:
+
+```sh
+npm run cypress:open
+# or
+npm run cypress:run
+```
 
 ## Learn More
 

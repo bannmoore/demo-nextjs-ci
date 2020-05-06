@@ -4,6 +4,7 @@ const { readFileSync } = require("fs");
 const sourceMapSupport = require("source-map-support");
 
 require("dotenv").config();
+global.db = require("./db");
 
 module.exports = (phase, { defaultConfig }) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
