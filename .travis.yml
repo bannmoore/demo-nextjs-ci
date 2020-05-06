@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - 12.4.0
+
+env:
+  - NODE_ENV=test CYPRESS_CACHE_FOLDER=.cache
+
+addons:
+  postgresql: "11.7"
+
+services:
+  - postgresql
+
+cache:
+  directories:
+    - next
+    - node_modules
+    - .cache
+
+script:
+  - npm run build
+  - npm run start &
+  - npm run ci:e2e
+  - kill $(jobs -p) || true

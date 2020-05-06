@@ -7,8 +7,6 @@ const config = require("./config");
 const basename = path.basename(__filename);
 const db = {};
 
-console.log("BAM", process.env.DATABASE_URL);
-
 let sequelize = new Sequelize(process.env.DATABASE_URL, config);
 
 fs.readdirSync(path.join(__dirname, "models"))
