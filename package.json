@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "next": "9.3.6",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "cypress": "^4.5.0"
   }
 }
